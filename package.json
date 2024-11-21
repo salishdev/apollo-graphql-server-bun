@@ -1,0 +1,28 @@
+{
+  "name": "apollo-graphql-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"pnpm watch:compile\" \"pnpm watch:dev\"",
+    "watch:compile": "swc src -w --out-dir dist --strip-leading-paths",
+    "watch:dev": "nodemon --watch \"dist/**/*\" -e js ./dist/index.js",
+    "build": "swc src -d dist --strip-leading-paths",
+    "start": "node dist/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@swc/cli": "^0.5.1",
+    "@swc/core": "^1.9.2",
+    "chokidar": "^3.6.0",
+    "concurrently": "^9.1.0",
+    "nodemon": "^3.1.7"
+  },
+  "dependencies": {
+    "@apollo/server": "^4.11.2",
+    "graphql": "^16.9.0"
+  }
+}
