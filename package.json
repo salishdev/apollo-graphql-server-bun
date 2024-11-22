@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "@apollo/server": "^4.11.2",
+    "@graphql-tools/utils": "^10.6.0",
     "graphql": "^16.9.0",
     "lodash": "^4.17.21"
   }

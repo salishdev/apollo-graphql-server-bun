@@ -7,6 +7,6 @@ export const schema = `#graphql
   }
 
   type Query {
-    authors: [Author]
+    authors: [Author] @disableIf(condition: true)
   }
 `
