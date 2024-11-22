@@ -5,11 +5,12 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "concurrently \"pnpm watch:compile\" \"pnpm watch:dev\"",
-    "watch:compile": "swc src -w --out-dir dist --strip-leading-paths",
-    "watch:dev": "nodemon --watch \"dist/**/*\" -e js ./dist/index.js",
     "build": "swc src -d dist --strip-leading-paths",
-    "start": "node dist/index.js"
+    "dev": "concurrently \"pnpm watch:compile\" \"pnpm watch:dev\"",
+    "start": "node dist/index.js",
+    "test": "jest",
+    "watch:compile": "swc src -w --out-dir dist --strip-leading-paths",
+    "watch:dev": "nodemon --watch \"dist/**/*\" -e js ./dist/index.js"
   },
   "keywords": [],
   "author": "",
@@ -18,9 +19,12 @@
     "@graphql-tools/schema": "^10.0.8",
     "@swc/cli": "^0.5.1",
     "@swc/core": "^1.9.2",
+    "@types/jest": "^29.5.14",
     "chokidar": "^3.6.0",
     "concurrently": "^9.1.0",
-    "nodemon": "^3.1.7"
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.7",
+    "ts-jest": "^29.2.5"
   },
   "dependencies": {
     "@apollo/server": "^4.11.2",

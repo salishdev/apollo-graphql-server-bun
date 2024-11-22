@@ -7,6 +7,7 @@ export const schema = `#graphql
   }
 
   type Query {
-    authors: [Author] @disableIf(condition: true)
+    # authors: [Author] @disableIf(condition: process.env.DISABLE === 'TRUE')
+    authors: [Author] @disableForEnv(envs: ["preview", "qa"])
   }
 `

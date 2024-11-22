@@ -1,1 +1,2 @@
-export * as Disable from './disable'
+export * as DisableIf from './disableIf'
+export * as DisableForEnv from './disableForEnv/disableForEnv'
