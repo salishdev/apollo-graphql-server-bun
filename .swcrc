@@ -14,5 +14,6 @@
     "type": "es6",
     "resolveFully": true
   },
+  "exclude": [".test.ts"],
   "minify": false
 }
