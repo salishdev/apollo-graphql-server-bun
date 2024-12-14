@@ -1,6 +1,7 @@
 import { makeExecutableSchema } from '@graphql-tools/schema'
 import { graphql } from 'graphql'
 import { schema, transformer } from './disableIf'
+import { expect, it, describe } from 'bun:test'
 
 describe('disableForEnv directive', () => {
   it('should return null for disabled fields', async () => {

@@ -9,8 +9,7 @@ export const resolvers = {
     authors,
   },
   Author: {
-    books: async (author) =>
-      data.books.filter((book) => book.authorId === author.id),
+    books: async (author) => data.books.filter((book) => book.authorId === author.id),
     fullName: async (author) => `${author.firstName} ${author.lastName}`,
   },
 }
